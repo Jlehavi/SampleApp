@@ -7,11 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NoteDisplayViewController: UIViewController {
 
+    @IBAction func newNote(_ sender: Any) {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("lol")
+        
         // Do any additional setup after loading the view.
     }
 

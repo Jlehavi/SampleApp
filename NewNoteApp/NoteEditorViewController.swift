@@ -6,9 +6,19 @@
 //
 
 import UIKit
+import CoreData
 
-class SecondViewController: UIViewController {
+class NoteEditorViewController: UIViewController {
 
+    @IBOutlet weak var noteInput: UITextView!
+    
+    var notes = [String]()
+    
+    @IBAction func saveNote(_ sender: UIButton) {
+        
+        notes.append(noteInput.text)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
