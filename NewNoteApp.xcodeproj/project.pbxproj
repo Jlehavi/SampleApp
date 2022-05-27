@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		69B39EAC283BD916000100B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B39EAB283BD916000100B6 /* AppDelegate.swift */; };
 		69B39EAE283BD916000100B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B39EAD283BD916000100B6 /* SceneDelegate.swift */; };
-		69B39EB0283BD916000100B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B39EAF283BD916000100B6 /* ViewController.swift */; };
+		69B39EB0283BD916000100B6 /* NoteDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B39EAF283BD916000100B6 /* NoteDisplayViewController.swift */; };
 		69B39EB3283BD916000100B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B39EB1283BD916000100B6 /* Main.storyboard */; };
 		69B39EB6283BD916000100B6 /* NewNoteApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69B39EB4283BD916000100B6 /* NewNoteApp.xcdatamodeld */; };
 		69B39EB8283BD918000100B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B39EB7283BD918000100B6 /* Assets.xcassets */; };
 		69B39EBB283BD918000100B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B39EB9283BD918000100B6 /* LaunchScreen.storyboard */; };
+		69B39EC3283E9056000100B6 /* NoteEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B39EC2283E9056000100B6 /* NoteEditorViewController.swift */; };
+		69B39EC528412FDC000100B6 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B39EC428412FDC000100B6 /* DataContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		69B39EA8283BD916000100B6 /* NewNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B39EAB283BD916000100B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69B39EAD283BD916000100B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		69B39EAF283BD916000100B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		69B39EAF283BD916000100B6 /* NoteDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDisplayViewController.swift; sourceTree = "<group>"; };
 		69B39EB2283BD916000100B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69B39EB5283BD916000100B6 /* NewNoteApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewNoteApp.xcdatamodel; sourceTree = "<group>"; };
 		69B39EB7283BD918000100B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69B39EBA283BD918000100B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69B39EBC283BD918000100B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69B39EC2283E9056000100B6 /* NoteEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditorViewController.swift; sourceTree = "<group>"; };
+		69B39EC428412FDC000100B6 /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				69B39EAB283BD916000100B6 /* AppDelegate.swift */,
+				69B39EC428412FDC000100B6 /* DataContainer.swift */,
 				69B39EAD283BD916000100B6 /* SceneDelegate.swift */,
-				69B39EAF283BD916000100B6 /* ViewController.swift */,
+				69B39EAF283BD916000100B6 /* NoteDisplayViewController.swift */,
 				69B39EB1283BD916000100B6 /* Main.storyboard */,
 				69B39EB7283BD918000100B6 /* Assets.xcassets */,
 				69B39EB9283BD918000100B6 /* LaunchScreen.storyboard */,
 				69B39EBC283BD918000100B6 /* Info.plist */,
 				69B39EB4283BD916000100B6 /* NewNoteApp.xcdatamodeld */,
+				69B39EC2283E9056000100B6 /* NoteEditorViewController.swift */,
 			);
 			path = NewNoteApp;
 			sourceTree = "<group>";
@@ -142,9 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				69B39EB6283BD916000100B6 /* NewNoteApp.xcdatamodeld in Sources */,
-				69B39EB0283BD916000100B6 /* ViewController.swift in Sources */,
+				69B39EB0283BD916000100B6 /* NoteDisplayViewController.swift in Sources */,
 				69B39EAC283BD916000100B6 /* AppDelegate.swift in Sources */,
+				69B39EC3283E9056000100B6 /* NoteEditorViewController.swift in Sources */,
 				69B39EAE283BD916000100B6 /* SceneDelegate.swift in Sources */,
+				69B39EC528412FDC000100B6 /* DataContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

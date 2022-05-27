@@ -12,13 +12,21 @@ class NoteEditorViewController: UIViewController {
 
     @IBOutlet weak var noteInput: UITextView!
     
-    var notes = [String]()
+    var note: Note?
     
     @IBAction func saveNote(_ sender: UIButton) {
+        if let note = note {
+            //Updating Existing Note
+            note.text = noteInput.text
+        } else {
+            //New Note Created
+            note = Note(context: DataContainer.shared.persistentContainer.viewContext)
+            note!.text = noteInput.text
+        }
         
-        notes.append(noteInput.text)
-        
+        DataContainer.shared.saveContext()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
