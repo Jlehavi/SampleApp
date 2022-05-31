@@ -11,6 +11,7 @@ import CoreData
 class NoteEditorViewController: UIViewController {
 
     @IBOutlet weak var noteInput: UITextView!
+    @IBOutlet weak var titleInput : UITextView!
     
     var note: Note?
     
@@ -18,10 +19,14 @@ class NoteEditorViewController: UIViewController {
         if let note = note {
             //Updating Existing Note
             note.text = noteInput.text
+            note.title = titleInput.text
         } else {
             //New Note Created
             note = Note(context: DataContainer.shared.persistentContainer.viewContext)
+            
             note!.text = noteInput.text
+            note!.title = titleInput.text
+            
         }
         
         DataContainer.shared.saveContext()

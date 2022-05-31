@@ -16,6 +16,7 @@
 		69B39EBB283BD918000100B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B39EB9283BD918000100B6 /* LaunchScreen.storyboard */; };
 		69B39EC3283E9056000100B6 /* NoteEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B39EC2283E9056000100B6 /* NoteEditorViewController.swift */; };
 		69B39EC528412FDC000100B6 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B39EC428412FDC000100B6 /* DataContainer.swift */; };
+		69B39EC928441553000100B6 /* noteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B39EC828441553000100B6 /* noteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		69B39EBC283BD918000100B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69B39EC2283E9056000100B6 /* NoteEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditorViewController.swift; sourceTree = "<group>"; };
 		69B39EC428412FDC000100B6 /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
+		69B39EC828441553000100B6 /* noteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				69B39EC428412FDC000100B6 /* DataContainer.swift */,
 				69B39EAD283BD916000100B6 /* SceneDelegate.swift */,
 				69B39EAF283BD916000100B6 /* NoteDisplayViewController.swift */,
+				69B39EC828441553000100B6 /* noteTableViewCell.swift */,
 				69B39EB1283BD916000100B6 /* Main.storyboard */,
 				69B39EB7283BD918000100B6 /* Assets.xcassets */,
 				69B39EB9283BD918000100B6 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69B39EB6283BD916000100B6 /* NewNoteApp.xcdatamodeld in Sources */,
+				69B39EC928441553000100B6 /* noteTableViewCell.swift in Sources */,
 				69B39EB0283BD916000100B6 /* NoteDisplayViewController.swift in Sources */,
 				69B39EAC283BD916000100B6 /* AppDelegate.swift in Sources */,
 				69B39EC3283E9056000100B6 /* NoteEditorViewController.swift in Sources */,
