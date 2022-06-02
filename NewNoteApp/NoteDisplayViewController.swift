@@ -34,11 +34,25 @@ class NoteDisplayViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     
-    
-
-    @IBAction func newNote(_ sender: Any) {
-        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Moving to edit existing note
+        let vc = storyboard?.instantiateViewController(withIdentifier: "NoteEditorViewController") as? NoteEditorViewController
+        vc?.note = notes[indexPath.row]
+        //Presenting note editor view controller
+        show(vc!, sender: self)
     }
+    
+    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Cheecking destination, then sending data chosen
+        if let dest = segue.destination as? NoteEditorViewController {
+            print("Peforming segue", notes[(noteTableView.indexPathForSelectedRow?.row)!])
+            dest.note = notes[(noteTableView.indexPathForSelectedRow?.row)!]
+        }
+    }
+     */
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -54,29 +68,16 @@ class NoteDisplayViewController: UIViewController, UITableViewDelegate, UITableV
     
     func fetchNotes() -> [Note]?{
         //Creating the fetch request
-        //let fetchRequest : NSFetchRequest<Note> = Note.fetchRequest()
         let fetchRequest = NSFetchRequest<Note>(entityName: "Note")
         var fetchResult : [Note]? = nil
-        //var result : [Note]? = nil
         
         do {
+            //Performing fetch request
             fetchResult = try DataContainer.shared.persistentContainer.viewContext.fetch(fetchRequest)
         } catch {
             print("Unsuccessful Fetch Request")
         }
-        
-        
-        //Performing the fetch request
-        /*DataContainer.shared.persistentContainer.viewContext.perform {
-            do {
-                //Executing fetch request
-                result = try fetchRequest.execute()
-            } catch {
-                print("Unseccessful Fetch Request")
-            }
-        }
-         */
-        
+
         return fetchResult
     }
     

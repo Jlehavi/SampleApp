@@ -38,6 +38,13 @@ class NoteEditorViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if let note = note {
+            noteInput.text = note.text
+            titleInput.text = note.title
+        }
+    }
+    
 
     /*
     // MARK: - Navigation
