@@ -42,21 +42,21 @@ class NoteDisplayViewController: UIViewController, UITableViewDelegate, UITableV
         show(vc!, sender: self)
     }
     
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //Cheecking destination, then sending data chosen
-        if let dest = segue.destination as? NoteEditorViewController {
-            print("Peforming segue", notes[(noteTableView.indexPathForSelectedRow?.row)!])
-            dest.note = notes[(noteTableView.indexPathForSelectedRow?.row)!]
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            let note = notes[indexPath.row]
+            DataContainer.shared.persistentContainer.viewContext.delete(note)
+            notes.remove(at: indexPath.row)
+            noteTableView.deleteRows(at: [indexPath], with: .left)
+            
+            DataContainer.shared.saveContext()
         }
     }
-     */
-    
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //Fetch request for notes
+        //Fetch request to load notes
         
         if let x = fetchNotes() {
             notes = x
